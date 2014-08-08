@@ -158,11 +158,11 @@ function getFifthGrade(){
 // function choiceTitle(rightAnswers,name, subScore){
 //
 //   this.rightAnswers = rightAnswers;
-//   this.name = name;
+//   this.names = names;
 //   this.subScore = subScore;
 // }
 //
-// singleChoice.prototype.getChoiceStudentAnswer = function(){
+// singleChoice.prototype.getChoiceStudentAnswer = function(name){
 //
 //
 //   var temporary = document.getElementsByName(name);
@@ -171,11 +171,11 @@ function getFifthGrade(){
 //   return  studentAnswer;
 // };
 //
-// singleChoice.prototype.judgeChoice = function(){
+// singleChoice.prototype.judgeChoice = function(rightAnswers){
 //
 //   var temp ;
 //   var studentAnswer = this.etChoiceStudentAnswer();
-//   for(var i=0;i<this.rightAnswers.length; i++){
+//   for(var i=0;i<rightAnswers.length; i++){
 //     if(studentAnswer[this.rightAnswers[i]])
 //       temp = true;
 //     else
@@ -192,7 +192,7 @@ function getFifthGrade(){
 //   var studentAnswer = this.getChoiceStudentAnswer();
 //   var judgeResult = judgeChoice();
 // };
-//
+
 // function fillingTitle(rightAnswers,name){
 //   this.rightAnswers = rightAnswers;
 //   this.name = name;

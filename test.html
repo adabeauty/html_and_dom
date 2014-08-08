@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset = UTF-16 />
+<script type="text/javaScript" src="processDate.js"></script>
+<title>my first html </title>
+</head>
+
+
+
+<body>
+
+
+<h1>统一建模语言理论测试</h1>
+<p3>考试科目：统一建模语言UML</p3><br />
+<p3>考试时间： 100分钟</p3><br />
+<p3>得分：</p3><p id="grade_output"></p><br />
+
+<form>
+  班级:
+<input type="text" id="student_class" />
+  学号:
+<input type="text" id="student_num" />
+  姓名：
+<input type="text" id="student_name" />
+<br />
+
+
+<p3>一、填空题( 每 题 5 分 , 共 20 分 )</p3><br />
+<ol type = 1>
+  <li>
+      UML 的中文全称是:
+    <input type="text" id="p1_1" name="p1_1" />
+  </li>
+  <li>
+
+      对象最突出的特征是:
+    <input type="text" id="p1_2_1" name="p1_2_1"/>
+    <input type="text" id="p1_2_2" name="p1_2_2"/>
+    <input type="text" id="p1_2_3" name="p1_2_3" />
+
+  </li>
+</ol>
+
+<p3>二、选择题( 每 题 10 分 , 共 20 分 )</p3><br />
+<ol type = 1 >
+
+  <li>
+    <p3>UML 与软件工程的关系是:<p3><br />
+
+        <input type="radio" name="p2_1" >(A) UML 就是软件工程<br />
+        <input type="radio" name="p2_1" >(B) UML 参与到软件工程中软件开发过程的几个阶段<br />
+        <input type="radio" name="p2_1" >(C) UML 与软件工程无关<br />
+        <input type="radio" name="p2_1" >(D) UML 是软件工程的一部分<br />
+
+  </li>
+
+  <li>
+    <p3>Java 语言支持:<p3><br />
+
+      <input type = "radio" name = "p2_2"   >(A) 单继承<br / >
+      <input type = "radio" name = "p2_2"   >(B) 多继承<br / >
+      <input type = "radio" name = "p2_2"   >(C) 单继承和多继承都支持<br / >
+      <input type = "radio" name = "p2_2"   >(D) 单继承和多继承都不支持<br / >
+
+  </li>
+
+</ol>
+
+
+<p3>三、多选题( 每 题 10 分 , 共 20 分 )</p3><br />
+<ol type = 1 >
+
+  <li>
+    <p3>UML 与软件工程的关系是:<p3><br />
+
+        <input type = "checkbox" name = "p3_1"  >(A) UML 就是软件工程<br / >
+        <input type = "checkbox" name = "p3_1"  >(B) UML 参与到软件工程中软件开发过程的几个阶段<br / >
+        <input type = "checkbox" name = "p3_1"  >(C) UML 与软件工程无关<br / >
+        <input type = "checkbox" name = "p3_1"  >(D) UML 是软件工程的一部分<br / >
+
+  </li>
+
+  <li>
+    <p3>Java 语言支持:<p3><br />
+
+      <input type = "checkbox" name = "p3_2"  >(A) 单继承<br />
+      <input type = "checkbox" name = "p3_2"  >(B) 多继承<br />
+      <input type = "checkbox" name = "p3_2"  >(C) 单继承和多继承都支持<br />
+      <input type = "checkbox" name = "p3_2"  >(D) 单继承和多继承都不支持<br />
+
+  </li>
+
+</ol>
+
+
+<p3>四、判断题( 每 题 10 分 , 共 20 分 )</p3><br />
+<ol type = 1 >
+
+    <li>
+        <p3>用例图只是用于和客户交流和沟通的,用于确定需求。</p3><br>
+        <input type = "radio" name = "p4_1" >正确<br />
+        <input type = "radio" name = "p4_1" >错误<br />
+
+    </li>
+
+    <li>
+
+        <p3>在状态图中,终止状态在一个状态图中允许有任意多个。</p3><br />
+        <input type = "radio" name = "p4_2" >正确<br />
+        <input type = "radio" name = "p4_2" >错误<br />
+
+    </li>
+
+</ol>
+
+<p3>五、简答题( 每 题 20分 , 共 20 分 )</p3><br />
+<ol>
+  <li>
+    简述什么是模型以及模型的表现形式?<br />
+    <textarea name= "p5_1" id = "p5_1" />
+
+    </textarea>
+  </li>
+</ol>
+
+
+
+<p3>请认真检查后提交！</p3>
+<button type="button" onclick="getGrade()">提交</button>
+</form>
+</body>
+
+</html>

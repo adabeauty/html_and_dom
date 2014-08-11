@@ -7,6 +7,7 @@ function getGrade(){
 
         grade.innerHTML = totalScore + "分";
         grade.className = "text-danger";
+        grade.size = "10px";
         var name = document.getElementById("student_name");
         alert(name.value + "，您本次考试得分：" + totalScore +"分" );
      }

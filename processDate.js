@@ -4,7 +4,9 @@ function getGrade(){
 
     var grade = document.getElementById("grade_output");
     if(judgeBasicInformation()){
-        grade.innerHTML =  "得分：" + totalScore + "分";
+
+        grade.innerHTML = totalScore + "分";
+        grade.className = "text-danger";
         var name = document.getElementById("student_name");
         alert(name.value + "，您本次考试得分：" + totalScore +"分" );
      }
@@ -39,12 +41,26 @@ function getTotalScore(){
     return totalScore;
 }
 function judgeBasicInformation(){
-  var temp = false;
+//  var temp = false;
   var class_num = document.getElementById("student_class");
   var number = document.getElementById("student_num");
   var name = document.getElementById("student_name");
 
-  if(class_num.value && number.value && name.value)
-    temp = true;
-  return temp;
+  if(class_num.value){
+      var temp_1 = true;
+  }else{
+      document.getElementById("class").className = "has-error";
+  }
+  if(number.value){
+      var temp_2 = true;
+  }else{
+      document.getElementById("number").className = "has-error";
+  }
+  if(name.value){
+      var temp_3 = true;
+  }else{
+      document.getElementById("name").className = "has-error";
+  }
+
+  return temp_1 && temp_2 && temp_3;
 }

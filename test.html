@@ -2,8 +2,19 @@
 <html>
 
 <head>
-<meta charset = UTF-16 />
-<script type="text/javaScript" src="processDate.js"></script>
+<meta charset = UTF-8 />
+<!-- <script src="processDate.js"></script> -->
+<script src="model/basic-object.js"></script>
+<script src="model/choice-title.js"></script>
+<script src="model/orderBlank-title.js"></script>
+<script src="model/unorderBlank-title.js"></script>
+<script src="processDate.js"></script>
+
+<link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="bootstrap/bootstrap.min.js"></script>
+<link rel="stylesheet" href="code-guide.css">
+
 </head>
 
 <body>
@@ -58,10 +69,15 @@
             <ol>
                 <li>
                         UML 与软件工程的关系是:<br>
-                        <input type="radio" name="p2_1" value="A">(A) UML 就是软件工程<br>
-                        <input type="radio" name="p2_1" value="B">(B) UML 参与到软件工程中软件开发过程的几个阶段<br>
-                        <input type="radio" name="p2_1" value="C">(C) UML 与软件工程无关<br>
-                        <input type="radio" name="p2_1" value="D">(D) UML 是软件工程的一部分
+
+                        <input type="radio" id="p2_1" name="p2_1" value="A">
+                        <label for="p2_1">(A) UML 就是软件工程</label><br>
+                        <input type="radio" id="p2_2" name="p2_1" value="B">
+                        <label for="p2_2">(B) UML 参与到软件工程中软件开发过程的几个阶段</label><br>
+                        <input type="radio" id="p2_3" name="p2_1" value="C">
+                        <label for="p2_3">(C) UML 与软件工程无关</label><br>
+                        <input type="radio" id="p2_4" name="p2_1" value="D">
+                        <label for="p2_4">(D) UML 是软件工程的一部分</label><br>
                 </li>
 
                 <li>

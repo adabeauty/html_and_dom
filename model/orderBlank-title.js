@@ -8,10 +8,10 @@ OrderBlankTitle.prototype = Object.create(BasicObject.prototype);
 OrderBlankTitle.prototype.constructor = OrderBlankTitle;
 
 
-OrderBlankTitle.prototype.getStudentAnswer = function(name){
+OrderBlankTitle.prototype.getStudentAnswer = function(cunrrentName){
 
-    var temporary = document.getElementsByName(name);
-    var studentAnswer = temporary[0].value;
+    // var studentAnswer = $("input[name="+cunrrentName+"]");
+    var studentAnswer = $('#'+ cunrrentName);
 
     return  studentAnswer;
 };
@@ -19,7 +19,7 @@ OrderBlankTitle.prototype.getStudentAnswer = function(name){
 OrderBlankTitle.prototype.judgeAnswer = function(rightAnswer, name){
 
       var studentAnswer = this.getStudentAnswer(name);
-      if( studentAnswer ===  rightAnswer){
+      if( studentAnswer[0].value ===  rightAnswer){
           temp = true;
       }
       else{

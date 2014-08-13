@@ -12,7 +12,8 @@ UnOrderBlankTitle.prototype.getStudentAnswer = function(){
     var everyStudentAnswer;
     var studentAnswer = [];
     for(var i=0; i<this.names.length; i++){
-        everyStudentAnswer = document.getElementsByName(this.names[i]);
+//        everyStudentAnswer = document.getElementsByName(this.names[i]);
+        everyStudentAnswer = $('#' + this.names[i]);
         studentAnswer.push(everyStudentAnswer[0].value);
     }
 

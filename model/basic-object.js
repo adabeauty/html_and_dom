@@ -5,7 +5,7 @@ function BasicObject(rightAnswers, names, subScore){
   this.subScore = subScore;
 }
 
-BasicObject.prototype.getStudentAnswer = function(name){
+BasicObject.prototype.getStudentAnswer = function(cunrrentName){
 
 };
 BasicObject.prototype.judgeAnswer  = function(rightAnswer,name){

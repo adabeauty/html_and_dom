@@ -25,13 +25,13 @@ function getTotalScore(){
     var firstGrade_2 = first_2.getStudentScore();
     var firstGrade = firstGrade_1 + firstGrade_2;
 
-    var second = new ChoiceTitle([[1], [0]],["p2_1", "p2_2"], 10);
+    var second = new ChoiceTitle([['B'], ['A']],["p2_1", "p2_2"], 10);
     var secondGrade = second.getStudentScore();
 
-    var third = new ChoiceTitle([[0,1,3], [0,1,2]],["p3_1", "p3_2"], 10);
+    var third = new ChoiceTitle([['A','B','D'], ['A','B','C']],["p3_1", "p3_2"], 10);
     var thirdGrade = third.getStudentScore();
 
-    var forth = new ChoiceTitle([[1], [0]],["p4_1", "p4_2"], 10);
+    var forth = new ChoiceTitle([['X'], ['V']],["p4_1", "p4_2"], 10);
     var forthScore = forth.getStudentScore();
 
     var fifth = new OrderBlankTitle(["模型是对现实世界的简化和抽象,模型是对所研究的系统、过程、事物或概念的一种表达形式。可以是物理实体;可以是某种图形;或者是一种数学表达式。"], ["p5_1"], 20);

@@ -12,14 +12,14 @@ ChoiceTitle.prototype.constructor = ChoiceTitle;
 
 
 // ChoiceTitle.prototype.getChoiceStudentAnswer = function(name){
- ChoiceTitle.prototype.getStudentAnswer = function(name){
+ ChoiceTitle.prototype.getStudentAnswer = function(cunrrentName){
 
-    var temporary = document.getElementsByName(name);
-    //var studentAnswer = $("input[name="+cunrrentName+"]:checked")
-    var studentAnswer = [];
-    for(var i=0; i<temporary.length; i++){
-        studentAnswer.push(temporary[i].checked);
-    }
+    //var temporary = document.getElementsByName(name);
+    var studentAnswer = $("input[name="+cunrrentName+"]:checked")
+  //  var studentAnswer = [];
+    // for(var i=0; i<temporary.length; i++){
+    //     studentAnswer.push(temporary[i].checked);
+    // }
 
     return  studentAnswer;
 };
@@ -43,7 +43,8 @@ ChoiceTitle.prototype.judgeAnswer = function(rightAnswer,name){
     var temp = true;
     if(judgelength(studentAnswer) === rightAnswer.length){
         for(var i=0;i<rightAnswer.length; i++){
-            if( studentAnswer[rightAnswer[i]] ){
+            // if( studentAnswer[rightAnswer[i]] ){
+            if( studentAnswer[i].value === rightAnswer[i]){
                   temp = temp && true;
             }
             else{

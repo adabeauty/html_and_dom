@@ -1,16 +1,12 @@
 function OrderBlankTitle(rightAnswers, names, subScore){
 
-//    BasicObject.call(this, rightAnswers, names, subScore);
     BasicObject.call(this, rightAnswers, names, subScore);
-    // this.rightAnswers = rightAnswers;
-    // this.names = names;
-    // this.subScore = subScore;
+
 }
 
 OrderBlankTitle.prototype = Object.create(BasicObject.prototype);
 OrderBlankTitle.prototype.constructor = OrderBlankTitle;
-// ChoiceTitle.prototype = Object.create(BasicObject.prototype);
-// ChoiceTitle.prototype.constructor = ChoiceTitle;
+
 
 OrderBlankTitle.prototype.getStudentAnswer = function(name){
 

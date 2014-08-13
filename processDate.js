@@ -1,15 +1,19 @@
+$(document).ready(function(){
+    $("button").on("click", getGrade);
+
+});
 function getGrade(){
 
     var totalScore = getTotalScore();
-
-    var grade = document.getElementById("grade_output");
-    var getGrade = document.getElementById("get_grade");
-    if(judgeBasicInformation(["class", "number", "name"],["student_class", "student_num", "student_name"])){
-        grade.innerHTML = totalScore + "分";
-        getGrade.classList.add("text-danger");
-     }
+    if(judgeBasicInformation(["#class", "#number", "#name"],["#student_class", "#student_num", "#student_name"])){
+        $("#grade_output").text(totalScore + "分");
+        $("#get_grade").addClass("text-danger");
+      }
      else{
-        alert("请输入您的基本信息！" );
+
+       $("#myModal").modal();
+       var currentLocation = location.href;
+       currentLocation = "javascript:scroll(0,0)";
      }
 }
 
@@ -20,7 +24,6 @@ function getTotalScore(){
     var first_2 = new  UnOrderBlankTitle([ "封装性", "继承性", "多态性"], ["p1_2_1", "p1_2_2", "p1_2_3"], 5);
     var firstGrade_2 = first_2.getStudentScore();
     var firstGrade = firstGrade_1 + firstGrade_2;
-
 
     var second = new ChoiceTitle([[1], [0]],["p2_1", "p2_2"], 10);
     var secondGrade = second.getStudentScore();
@@ -40,15 +43,16 @@ function getTotalScore(){
 }
 
 function judgeBasicInformation(divIds, inputIds){
+
     var temp = true;
     for(var i=0; i<divIds.length; i++){
-        var inputId = document.getElementById(inputIds[i]);
-        var divId = document.getElementById(divIds[i]);
-        if(inputId.value){
-            divId.classList.remove("has-error");
+        var inputId = $(inputIds[i]);
+        var divId = $(divIds[i]);
+        if(inputId.val()){
+            divId.removeClass("has-error");
             temp = temp && true;
         }else{
-            divId.classList.add("has-error");
+            divId.addClass("has-error");
             temp = temp && false;
         }
     }

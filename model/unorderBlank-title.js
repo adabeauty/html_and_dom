@@ -1,9 +1,7 @@
 function UnOrderBlankTitle(rightAnswers, names, subScore){
 
     BasicObject.call(this, rightAnswers, names, subScore);
-    // this.rightAnswers = rightAnswers;
-    // this.names = names;
-    // this.subScore = subScore;
+
 }
 
 UnOrderBlankTitle.prototype = Object.create(BasicObject.prototype);

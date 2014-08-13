@@ -15,6 +15,7 @@ ChoiceTitle.prototype.constructor = ChoiceTitle;
  ChoiceTitle.prototype.getStudentAnswer = function(name){
 
     var temporary = document.getElementsByName(name);
+    //var studentAnswer = $("input[name="+cunrrentName+"]:checked")
     var studentAnswer = [];
     for(var i=0; i<temporary.length; i++){
         studentAnswer.push(temporary[i].checked);
